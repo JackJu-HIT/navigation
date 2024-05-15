@@ -59,7 +59,7 @@ bool GridPath::getPath(float* potential, double start_x, double start_y, double 
                 if (xd == 0 && yd == 0)
                     continue;
                 int x = current.first + xd, y = current.second + yd;
-                if (x >= xs_ || y >= ys_ || x < 0 || y < 0)
+                if (x > xs_ || y > ys_ || x < 0 || y < 0)
                     continue;
                 int index = getIndex(x, y);
                 if (potential[index] < min_val) {
